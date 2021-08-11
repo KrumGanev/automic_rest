@@ -45,8 +45,7 @@ print(runid)
 import time
 while get_status(1111, runid) != 1900:
     time.sleep(3)
-    status = automic.executions().getExecution(client_id=1111, run_id=runid).json()['status']
-
+    
 response = automic.executions().listReportContent(client_id=1111, run_id=runid, report_type='ACT').json()
 print(response['data'][0]['content'])
 
