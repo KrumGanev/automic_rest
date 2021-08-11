@@ -1,8 +1,6 @@
 First Header | Second Header | Third Header
 ------------ | ------------- | ------------- 
-executions | changeExecutionStatus | *   summary - Changes the status of an execution.
-         *   path - /{client_id}/executions/{run_id}/status
-         *   method - post
+executions | changeExecutionStatus | *   summary - Changes the status of an execution.\n*   path - /{client_id}/executions/{run_id}/status\n*   method - post
 
 
 
