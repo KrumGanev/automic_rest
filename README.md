@@ -33,9 +33,19 @@ data = {
     "PASS#": "test"
   }
  }
-runid = automic.executions().executeObject(client_id=1111, data=data).json()['run_id']
 
+
+def get_status(client, runid):
+    return automic.executions().getExecution(client_id=client, run_id=runid).json()['status']
+
+runid = automic.executions().executeObject(client_id=1111, data=data).json()['run_id']
 print(runid)
+
+
+import time
+while get_status(1111, runid) != 1900:
+    time.sleep(3)
+    status = automic.executions().getExecution(client_id=1111, run_id=runid).json()['status']
 
 response = automic.executions().listReportContent(client_id=1111, run_id=runid, report_type='ACT').json()
 print(response['data'][0]['content'])
