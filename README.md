@@ -1,8 +1,7 @@
 <table>
-     <thead><th>Class</th><th>Function</th><th>Infos</th></thead>
+<thead><th>Class</th><th>Function</th><th>Infos</th></thead>
 <tbody>
-<tr>
-     <td rowsapn="11">executions</td>
+     <tr><td>executions</td>
      <td>changeExecutionStatus</td>
      <td>
          <ul>
@@ -10,7 +9,8 @@
              <li>path - /{client_id}/executions/{run_id}/status</li>
              <li>method - post</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>executions</td>
      <td>computeErtEstimations</td>
      <td>
          <ul>
@@ -18,7 +18,8 @@
              <li>path - /{client_id}/executions/{run_id}/ert</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>executions</td>
      <td>createComments</td>
      <td>
          <ul>
@@ -26,7 +27,8 @@
              <li>path - /{client_id}/executions/{run_id}/comments</li>
              <li>method - post</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>executions</td>
      <td>executeObject</td>
      <td>
          <ul>
@@ -34,7 +36,8 @@
              <li>path - /{client_id}/executions</li>
              <li>method - post</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>executions</td>
      <td>getChildrenOfExecution</td>
      <td>
          <ul>
@@ -42,7 +45,8 @@
              <li>path - /{client_id}/executions/{run_id}/children</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>executions</td>
      <td>getExecution</td>
      <td>
          <ul>
@@ -50,7 +54,8 @@
              <li>path - /{client_id}/executions/{run_id}</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>executions</td>
      <td>listComments</td>
      <td>
          <ul>
@@ -58,7 +63,8 @@
              <li>path - /{client_id}/executions/{run_id}/comments</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>executions</td>
      <td>listExecutions</td>
      <td>
          <ul>
@@ -66,7 +72,8 @@
              <li>path - /{client_id}/executions</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>executions</td>
      <td>listReportContent</td>
      <td>
          <ul>
@@ -74,7 +81,8 @@
              <li>path - /{client_id}/executions/{run_id}/reports/{report_type}</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>executions</td>
      <td>listReports</td>
      <td>
          <ul>
@@ -82,7 +90,8 @@
              <li>path - /{client_id}/executions/{run_id}/reports</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>executions</td>
      <td>listVariables</td>
      <td>
          <ul>
@@ -90,9 +99,8 @@
              <li>path - /{client_id}/executions/{run_id}/variables</li>
              <li>method - get</li>
          </ul>
-     </td>
-<tr>
-     <td rowsapn='6'>forecasts</td>
+     </td></tr>
+     <tr><td>forecasts</td>
      <td>createForecast</td>
      <td>
          <ul>
@@ -100,7 +108,8 @@
              <li>path - /{client_id}/forecasts</li>
              <li>method - post</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>forecasts</td>
      <td>deleteForecast</td>
      <td>
          <ul>
@@ -108,7 +117,8 @@
              <li>path - /{client_id}/forecasts</li>
              <li>method - delete</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>forecasts</td>
      <td>getForecast</td>
      <td>
          <ul>
@@ -116,7 +126,8 @@
              <li>path - /{client_id}/forecasts/{forecast_id}</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>forecasts</td>
      <td>listForecastAgents</td>
      <td>
          <ul>
@@ -124,7 +135,8 @@
              <li>path - /{client_id}/forecasts/agents</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>forecasts</td>
      <td>listForecasts</td>
      <td>
          <ul>
@@ -132,7 +144,8 @@
              <li>path - /{client_id}/forecasts</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>forecasts</td>
      <td>modifyForecast</td>
      <td>
          <ul>
@@ -140,9 +153,8 @@
              <li>path - /{client_id}/forecasts/{forecast_id}</li>
              <li>method - post</li>
          </ul>
-     </td>
-<tr>
-     <td rowsapn='6'>objects</td>
+     </td></tr>
+     <tr><td>objects</td>
      <td>getObjects</td>
      <td>
          <ul>
@@ -150,7 +162,8 @@
              <li>path - /{client_id}/objects/{object_name}</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>objects</td>
      <td>getTimezoneInfo</td>
      <td>
          <ul>
@@ -158,7 +171,8 @@
              <li>path - /{client_id}/objects/{object_name}/timezone</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>objects</td>
      <td>listObjectInputs</td>
      <td>
          <ul>
@@ -166,7 +180,8 @@
              <li>path - /{client_id}/objects/{object_name}/inputs</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>objects</td>
      <td>postObjects</td>
      <td>
          <ul>
@@ -174,7 +189,8 @@
              <li>path - /{client_id}/objects</li>
              <li>method - post</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>objects</td>
      <td>usage</td>
      <td>
          <ul>
@@ -182,7 +198,8 @@
              <li>path - /{client_id}/objects/{object_name}/usage</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>objects</td>
      <td>usageForCalendarEvents</td>
      <td>
          <ul>
@@ -190,9 +207,8 @@
              <li>path - /{client_id}/objects/{object_name}/usage/calendarevent/{event_name}</li>
              <li>method - get</li>
          </ul>
-     </td>
-<tr>
-     <td rowsapn='1'>ping</td>
+     </td></tr>
+     <tr><td>ping</td>
      <td>ping</td>
      <td>
          <ul>
@@ -200,9 +216,8 @@
              <li>path - /ping</li>
              <li>method - get</li>
          </ul>
-     </td>
-<tr>
-     <td rowsapn='12'>repositories</td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>branchDiff</td>
      <td>
          <ul>
@@ -210,7 +225,8 @@
              <li>path - /{client_id}/repositories/branches/{branch_name}/diff</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>branchLog</td>
      <td>
          <ul>
@@ -218,7 +234,8 @@
              <li>path - /{client_id}/repositories/branches/{branch_name}/log</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>commitChanges</td>
      <td>
          <ul>
@@ -226,7 +243,8 @@
              <li>path - /{client_id}/repositories/commits</li>
              <li>method - post</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>createBranch</td>
      <td>
          <ul>
@@ -234,7 +252,8 @@
              <li>path - /{client_id}/repositories/branches</li>
              <li>method - post</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>createRepository</td>
      <td>
          <ul>
@@ -242,7 +261,8 @@
              <li>path - /{client_id}/repositories</li>
              <li>method - post</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>delete</td>
      <td>
          <ul>
@@ -250,7 +270,8 @@
              <li>path - /{client_id}/repositories/merge</li>
              <li>method - delete</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>getChanges</td>
      <td>
          <ul>
@@ -258,7 +279,8 @@
              <li>path - /{client_id}/repositories/changes</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>getRepository</td>
      <td>
          <ul>
@@ -266,7 +288,8 @@
              <li>path - /{client_id}/repositories</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>listBranches</td>
      <td>
          <ul>
@@ -274,7 +297,8 @@
              <li>path - /{client_id}/repositories/branches</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>mergeBranchIntoActive</td>
      <td>
          <ul>
@@ -282,7 +306,8 @@
              <li>path - /{client_id}/repositories/merge</li>
              <li>method - post</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>moveHead</td>
      <td>
          <ul>
@@ -290,7 +315,8 @@
              <li>path - /{client_id}/repositories/commits/{commit_id}</li>
              <li>method - post</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>repositories</td>
      <td>pull</td>
      <td>
          <ul>
@@ -298,9 +324,8 @@
              <li>path - /{client_id}/repositories/pull</li>
              <li>method - post</li>
          </ul>
-     </td>
-<tr>
-     <td rowsapn='1'>scripts</td>
+     </td></tr>
+     <tr><td>scripts</td>
      <td>activateScript</td>
      <td>
          <ul>
@@ -308,9 +333,8 @@
              <li>path - /{client_id}/scripts</li>
              <li>method - post</li>
          </ul>
-     </td>
-<tr>
-     <td rowsapn='1'>search</td>
+     </td></tr>
+     <tr><td>search</td>
      <td>findObjects</td>
      <td>
          <ul>
@@ -318,9 +342,8 @@
              <li>path - /{client_id}/search</li>
              <li>method - post</li>
          </ul>
-     </td>
-<tr>
-     <td rowsapn='7'>system</td>
+     </td></tr>
+     <tr><td>system</td>
      <td>deleteClients</td>
      <td>
          <ul>
@@ -328,7 +351,8 @@
              <li>path - /{client_id}/system/clients/{client_id}</li>
              <li>method - delete</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>system</td>
      <td>getAgentDetails</td>
      <td>
          <ul>
@@ -336,7 +360,8 @@
              <li>path - /{client_id}/system/agents/{object_name}</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>system</td>
      <td>getFeatureList</td>
      <td>
          <ul>
@@ -344,7 +369,8 @@
              <li>path - /{client_id}/system/features</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>system</td>
      <td>healthCheck</td>
      <td>
          <ul>
@@ -352,7 +378,8 @@
              <li>path - /{client_id}/system/health</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>system</td>
      <td>listAgentgroups</td>
      <td>
          <ul>
@@ -360,7 +387,8 @@
              <li>path - /{client_id}/system/agentgroups</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>system</td>
      <td>listAgents</td>
      <td>
          <ul>
@@ -368,7 +396,8 @@
              <li>path - /{client_id}/system/agents</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>system</td>
      <td>listClients</td>
      <td>
          <ul>
@@ -376,9 +405,8 @@
              <li>path - /{client_id}/system/clients</li>
              <li>method - get</li>
          </ul>
-     </td>
-<tr>
-     <td rowsapn='2'>telemetry</td>
+     </td></tr>
+     <tr><td>telemetry</td>
      <td>export</td>
      <td>
          <ul>
@@ -386,7 +414,8 @@
              <li>path - /{client_id}/telemetry/export/{start_from}</li>
              <li>method - get</li>
          </ul>
-     </td>
+     </td></tr>
+     <tr><td>telemetry</td>
      <td>productList</td>
      <td>
          <ul>
@@ -394,7 +423,6 @@
              <li>path - /{client_id}/telemetry/products</li>
              <li>method - get</li>
          </ul>
-     </td>
-</tr>
+     </td></tr>
 </tbody>
 </table>
