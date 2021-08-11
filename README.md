@@ -1,284 +1,400 @@
 <table>
-  <tbody>
-    <tr>
-      <th>Tables</th>
-      <th align="center">Are</th>
-      <th align="right">Cool</th>
-    </tr>
-    <tr>
-      <td>col 3 is</td>
-      <td align="center">right-aligned</td>
-      <td align="right">$1600</td>
-    </tr>
-    <tr>
-      <td>col 2 is</td>
-      <td align="center">centered</td>
-      <td align="right">$12</td>
-    </tr>
-    <tr>
-      <td>zebra stripes</td>
-      <td align="center">are neat</td>
-      <td align="right">$1</td>
-    </tr>
-    <tr>
-      <td>
-        <ul>
-          <li>item1</li>
-          <li>item2</li>
-        </ul>
-      </td>
-      <td align="center">See the list</td>
-      <td align="right">from the first column</td>
-    </tr>
-  </tbody>
-</table>   
-
-First Header | Second Header | Third Header
------------- | ------------- | ------------- 
-executions | changeExecutionStatus | *   summary - Changes the status of an execution.\n*   path - /{client_id}/executions/{run_id}/status\n*   method - post
-
-
-
-*    executions
-     *   changeExecutionStatus
-         *   summary - Changes the status of an execution.
-         *   path - /{client_id}/executions/{run_id}/status
-         *   method - post
-
-     *   computeErtEstimations
-         *   summary - Get ERT estimations for the given workflow.
-         *   path - /{client_id}/executions/{run_id}/ert
-         *   method - get
-
-     *   createComments
-         *   summary - Appends a comment to a given execution.
-         *   path - /{client_id}/executions/{run_id}/comments
-         *   method - post
-
-     *   executeObject
-         *   summary - Execute an object with or without input parameters (promptsets variables).
-         *   path - /{client_id}/executions
-         *   method - post
-
-     *   getChildrenOfExecution
-         *   summary - Gets all immediate execution children, ordered descending by activation_time and run_id.
-         *   path - /{client_id}/executions/{run_id}/children
-         *   method - get
-
-     *   getExecution
-         *   summary - Get details of a given execution.
-         *   path - /{client_id}/executions/{run_id}
-         *   method - get
-
-     *   listComments
-         *   summary - List all comments for a given execution.
-         *   path - /{client_id}/executions/{run_id}/comments
-         *   method - get
-
-     *   listExecutions
-         *   summary - List executions, ordered descending by activation_time and run_id.
-         *   path - /{client_id}/executions
-         *   method - get
-
-     *   listReportContent
-         *   summary - Report content pages.
-         *   path - /{client_id}/executions/{run_id}/reports/{report_type}
-         *   method - get
-
-     *   listReports
-         *   summary - Report list for a given execution.
-         *   path - /{client_id}/executions/{run_id}/reports
-         *   method - get
-
-     *   listVariables
-         *   summary - List all variables for a given execution.
-         *   path - /{client_id}/executions/{run_id}/variables
-         *   method - get
-
-*    forecasts
-     *   createForecast
-         *   summary - Create a forecast.
-         *   path - /{client_id}/forecasts
-         *   method - post
-
-     *   deleteForecast
-         *   summary - Delete forecasts using ids.
-         *   path - /{client_id}/forecasts
-         *   method - delete
-
-     *   getForecast
-         *   summary - Get details of a given forecast.
-         *   path - /{client_id}/forecasts/{forecast_id}
-         *   method - get
-
-     *   listForecastAgents
-         *   summary - List forecast agents and gaps.
-         *   path - /{client_id}/forecasts/agents
-         *   method - get
-
-     *   listForecasts
-         *   summary - List all forecasts, ordered descending by start_time.
-         *   path - /{client_id}/forecasts
-         *   method - get
-
-     *   modifyForecast
-         *   summary - Changes the title of a forecast item.
-         *   path - /{client_id}/forecasts/{forecast_id}
-         *   method - post
-
-*    objects
-     *   getObjects
-         *   summary - Can be used to export single objects by name
-         *   path - /{client_id}/objects/{object_name}
-         *   method - get
-
-     *   getTimezoneInfo
-         *   summary - Returns the time zone used by an object definition or defaults if the object or time zone does not exist.
-         *   path - /{client_id}/objects/{object_name}/timezone
-         *   method - get
-
-     *   listObjectInputs
-         *   summary - List all inputs for a given object.
-         *   path - /{client_id}/objects/{object_name}/inputs
-         *   method - get
-
-     *   postObjects
-         *   summary - Can be used to import single objects
-         *   path - /{client_id}/objects
-         *   method - post
-
-     *   usage
-         *   summary - Returns a list of objects with a reference name, a boolean to show if the actual result has hidden objects due to acl conflicts, for the given objectname
-         *   path - /{client_id}/objects/{object_name}/usage
-         *   method - get
-
-     *   usageForCalendarEvents
-         *   summary - Returns a list of objects with a reference name, a boolean to show if the actual result has hidden objects due to acl conflicts, for the given objectname
-         *   path - /{client_id}/objects/{object_name}/usage/calendarevent/{event_name}
-         *   method - get
-
-*    ping
-     *   ping
-         *   summary - Can be used to determine if the JCP process is currently running.
-         *   path - /ping
-         *   method - get
-
-*    repositories
-     *   branchDiff
-         *   summary - Get content of two files to see their differences.
-         *   path - /{client_id}/repositories/branches/{branch_name}/diff
-         *   method - get
-
-     *   branchLog
-         *   summary - Retrieves the history of the repository for max_results entries.
-         *   path - /{client_id}/repositories/branches/{branch_name}/log
-         *   method - get
-
-     *   commitChanges
-         *   summary - Commits only changed objects for client to repository.
-         *   path - /{client_id}/repositories/commits
-         *   method - post
-
-     *   createBranch
-         *   summary - Create a new branch.
-         *   path - /{client_id}/repositories/branches
-         *   method - post
-
-     *   createRepository
-         *   summary - Initializes the repository for the specified client.
-         *   path - /{client_id}/repositories
-         *   method - post
-
-     *   delete
-         *   summary - Abort merging so we get out of merging state.
-         *   path - /{client_id}/repositories/merge
-         *   method - delete
-
-     *   getChanges
-         *   summary - Returns a list of objects that have uncommitted changes.
-         *   path - /{client_id}/repositories/changes
-         *   method - get
-
-     *   getRepository
-         *   summary - Retrieves repository information for the given client.
-         *   path - /{client_id}/repositories
-         *   method - get
-
-     *   listBranches
-         *   summary - Retrieves a list of branches.
-         *   path - /{client_id}/repositories/branches
-         *   method - get
-
-     *   mergeBranchIntoActive
-         *   summary - Merge another branch in active branch.
-         *   path - /{client_id}/repositories/merge
-         *   method - post
-
-     *   moveHead
-         *   summary - Imports version of provided GIT Hash to automation engine.
-         *   path - /{client_id}/repositories/commits/{commit_id}
-         *   method - post
-
-     *   pull
-         *   summary - Pull changes from repository for active branch.
-         *   path - /{client_id}/repositories/pull
-         *   method - post
-
-*    scripts
-     *   activateScript
-         *   summary - Runs scripts written in the Automation Engine scripting language.
-         *   path - /{client_id}/scripts
-         *   method - post
-
-*    search
-     *   findObjects
-         *   summary - Search the process assembly for objects using different filter criteria.
-         *   path - /{client_id}/search
-         *   method - post
-
-*    system
-     *   deleteClients
-         *   summary - Delete a client
-         *   path - /{client_id}/system/clients/{client_id}
-         *   method - delete
-
-     *   getAgentDetails
-         *   summary - Returns detailed agent information
-         *   path - /{client_id}/system/agents/{object_name}
-         *   method - get
-
-     *   getFeatureList
-         *   summary - Retrieve system feature information.
-         *   path - /{client_id}/system/features
-         *   method - get
-
-     *   healthCheck
-         *   summary - Can be used to determine if the automation system is in a healthy state. A system is healthy if there is a PWP and at least one instance of CP and JWP respectively. When healthy, HTTP 200 is returned. When unhealthy, HTTP 503. Note: only use the HTTP status code to determine the health status since the response body is optional.
-         *   path - /{client_id}/system/health
-         *   method - get
-
-     *   listAgentgroups
-         *   summary -
-         *   path - /{client_id}/system/agentgroups
-         *   method - get
-
-     *   listAgents
-         *   summary - Lists all agents that are defined in the system. The returned list contains running and stopped agents.
-         *   path - /{client_id}/system/agents
-         *   method - get
-
-     *   listClients
-         *   summary - List of clients in the system.
-         *   path - /{client_id}/system/clients
-         *   method - get
-
-*    telemetry
-     *   export
-         *   summary - Retrieve telemetry data per month as json for the last n months, including the current month. Only works for client 0.   
-         *   path - /{client_id}/telemetry/export/{start_from}
-         *   method - get
-
-     *   productList
-         *   summary - Retrieve available products
-         *   path - /{client_id}/telemetry/products
-         *   method - get
+<thead><th>Class</th><th>Function</th<th>Infos</th></thead>
+<tbody>
+<tr>
+     <td rowsapn='11'>executions</td>
+     <td>changeExecutionStatus</td>
+     <td>
+         <ul>
+             <li>summary - Changes the status of an execution.</li>
+             <li>path - /{client_id}/executions/{run_id}/status</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+     <td>computeErtEstimations</td>
+     <td>
+         <ul>
+             <li>summary - Get ERT estimations for the given workflow.</li>
+             <li>path - /{client_id}/executions/{run_id}/ert</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>createComments</td>
+     <td>
+         <ul>
+             <li>summary - Appends a comment to a given execution.</li>
+             <li>path - /{client_id}/executions/{run_id}/comments</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+     <td>executeObject</td>
+     <td>
+         <ul>
+             <li>summary - Execute an object with or without input parameters (promptsets variables).</li>
+             <li>path - /{client_id}/executions</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+     <td>getChildrenOfExecution</td>
+     <td>
+         <ul>
+             <li>summary - Gets all immediate execution children, ordered descending by activation_time and run_id.</li>
+             <li>path - /{client_id}/executions/{run_id}/children</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>getExecution</td>
+     <td>
+         <ul>
+             <li>summary - Get details of a given execution.</li>
+             <li>path - /{client_id}/executions/{run_id}</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listComments</td>
+     <td>
+         <ul>
+             <li>summary - List all comments for a given execution.</li>
+             <li>path - /{client_id}/executions/{run_id}/comments</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listExecutions</td>
+     <td>
+         <ul>
+             <li>summary - List executions, ordered descending by activation_time and run_id.</li>
+             <li>path - /{client_id}/executions</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listReportContent</td>
+     <td>
+         <ul>
+             <li>summary - Report content pages.</li>
+             <li>path - /{client_id}/executions/{run_id}/reports/{report_type}</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listReports</td>
+     <td>
+         <ul>
+             <li>summary - Report list for a given execution.</li>
+             <li>path - /{client_id}/executions/{run_id}/reports</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listVariables</td>
+     <td>
+         <ul>
+             <li>summary - List all variables for a given execution.</li>
+             <li>path - /{client_id}/executions/{run_id}/variables</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+<tr>
+     <td rowsapn='6'>forecasts</td>
+     <td>createForecast</td>
+     <td>
+         <ul>
+             <li>summary - Create a forecast.</li>
+             <li>path - /{client_id}/forecasts</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+     <td>deleteForecast</td>
+     <td>
+         <ul>
+             <li>summary - Delete forecasts using ids.</li>
+             <li>path - /{client_id}/forecasts</li>
+             <li>method - delete</li>
+         </ul>
+     </td>
+     <td>getForecast</td>
+     <td>
+         <ul>
+             <li>summary - Get details of a given forecast.</li>
+             <li>path - /{client_id}/forecasts/{forecast_id}</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listForecastAgents</td>
+     <td>
+         <ul>
+             <li>summary - List forecast agents and gaps.</li>
+             <li>path - /{client_id}/forecasts/agents</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listForecasts</td>
+     <td>
+         <ul>
+             <li>summary - List all forecasts, ordered descending by start_time.</li>
+             <li>path - /{client_id}/forecasts</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>modifyForecast</td>
+     <td>
+         <ul>
+             <li>summary - Changes the title of a forecast item.</li>
+             <li>path - /{client_id}/forecasts/{forecast_id}</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+<tr>
+     <td rowsapn='6'>objects</td>
+     <td>getObjects</td>
+     <td>
+         <ul>
+             <li>summary - Can be used to export single objects by name</li>
+             <li>path - /{client_id}/objects/{object_name}</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>getTimezoneInfo</td>
+     <td>
+         <ul>
+             <li>summary - Returns the time zone used by an object definition or defaults if the object or time zone does not exist.</li>       
+             <li>path - /{client_id}/objects/{object_name}/timezone</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listObjectInputs</td>
+     <td>
+         <ul>
+             <li>summary - List all inputs for a given object.</li>
+             <li>path - /{client_id}/objects/{object_name}/inputs</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>postObjects</td>
+     <td>
+         <ul>
+             <li>summary - Can be used to import single objects</li>
+             <li>path - /{client_id}/objects</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+     <td>usage</td>
+     <td>
+         <ul>
+             <li>summary - Returns a list of objects with a reference name, a boolean to show if the actual result has hidden objects due to acl conflicts, for the given objectname</li>
+             <li>path - /{client_id}/objects/{object_name}/usage</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>usageForCalendarEvents</td>
+     <td>
+         <ul>
+             <li>summary - Returns a list of objects with a reference name, a boolean to show if the actual result has hidden objects due to acl conflicts, for the given objectname</li>
+             <li>path - /{client_id}/objects/{object_name}/usage/calendarevent/{event_name}</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+<tr>
+     <td rowsapn='1'>ping</td>
+     <td>ping</td>
+     <td>
+         <ul>
+             <li>summary - Can be used to determine if the JCP process is currently running.</li>
+             <li>path - /ping</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+<tr>
+     <td rowsapn='12'>repositories</td>
+     <td>branchDiff</td>
+     <td>
+         <ul>
+             <li>summary - Get content of two files to see their differences.</li>
+             <li>path - /{client_id}/repositories/branches/{branch_name}/diff</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>branchLog</td>
+     <td>
+         <ul>
+             <li>summary - Retrieves the history of the repository for max_results entries.</li>
+             <li>path - /{client_id}/repositories/branches/{branch_name}/log</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>commitChanges</td>
+     <td>
+         <ul>
+             <li>summary - Commits only changed objects for client to repository.</li>
+             <li>path - /{client_id}/repositories/commits</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+     <td>createBranch</td>
+     <td>
+         <ul>
+             <li>summary - Create a new branch.</li>
+             <li>path - /{client_id}/repositories/branches</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+     <td>createRepository</td>
+     <td>
+         <ul>
+             <li>summary - Initializes the repository for the specified client.</li>
+             <li>path - /{client_id}/repositories</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+     <td>delete</td>
+     <td>
+         <ul>
+             <li>summary - Abort merging so we get out of merging state.</li>
+             <li>path - /{client_id}/repositories/merge</li>
+             <li>method - delete</li>
+         </ul>
+     </td>
+     <td>getChanges</td>
+     <td>
+         <ul>
+             <li>summary - Returns a list of objects that have uncommitted changes.</li>
+             <li>path - /{client_id}/repositories/changes</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>getRepository</td>
+     <td>
+         <ul>
+             <li>summary - Retrieves repository information for the given client.</li>
+             <li>path - /{client_id}/repositories</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listBranches</td>
+     <td>
+         <ul>
+             <li>summary - Retrieves a list of branches.</li>
+             <li>path - /{client_id}/repositories/branches</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>mergeBranchIntoActive</td>
+     <td>
+         <ul>
+             <li>summary - Merge another branch in active branch.</li>
+             <li>path - /{client_id}/repositories/merge</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+     <td>moveHead</td>
+     <td>
+         <ul>
+             <li>summary - Imports version of provided GIT Hash to automation engine.</li>
+             <li>path - /{client_id}/repositories/commits/{commit_id}</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+     <td>pull</td>
+     <td>
+         <ul>
+             <li>summary - Pull changes from repository for active branch.</li>
+             <li>path - /{client_id}/repositories/pull</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+<tr>
+     <td rowsapn='1'>scripts</td>
+     <td>activateScript</td>
+     <td>
+         <ul>
+             <li>summary - Runs scripts written in the Automation Engine scripting language.</li>
+             <li>path - /{client_id}/scripts</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+<tr>
+     <td rowsapn='1'>search</td>
+     <td>findObjects</td>
+     <td>
+         <ul>
+             <li>summary - Search the process assembly for objects using different filter criteria.</li>
+             <li>path - /{client_id}/search</li>
+             <li>method - post</li>
+         </ul>
+     </td>
+<tr>
+     <td rowsapn='7'>system</td>
+     <td>deleteClients</td>
+     <td>
+         <ul>
+             <li>summary - Delete a client</li>
+             <li>path - /{client_id}/system/clients/{client_id}</li>
+             <li>method - delete</li>
+         </ul>
+     </td>
+     <td>getAgentDetails</td>
+     <td>
+         <ul>
+             <li>summary - Returns detailed agent information</li>
+             <li>path - /{client_id}/system/agents/{object_name}</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>getFeatureList</td>
+     <td>
+         <ul>
+             <li>summary - Retrieve system feature information.</li>
+             <li>path - /{client_id}/system/features</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>healthCheck</td>
+     <td>
+         <ul>
+             <li>summary - Can be used to determine if the automation system is in a healthy state. A system is healthy if there is a PWP and at least one instance of CP and JWP respectively. When healthy, HTTP 200 is returned. When unhealthy, HTTP 503. Note: only use the HTTP status code to determine the health status since the response body is optional.</li>
+             <li>path - /{client_id}/system/health</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listAgentgroups</td>
+     <td>
+         <ul>
+             <li>summary - </li>
+             <li>path - /{client_id}/system/agentgroups</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listAgents</td>
+     <td>
+         <ul>
+             <li>summary - Lists all agents that are defined in the system. The returned list contains running and stopped agents.</li>
+             <li>path - /{client_id}/system/agents</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>listClients</td>
+     <td>
+         <ul>
+             <li>summary - List of clients in the system.</li>
+             <li>path - /{client_id}/system/clients</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+<tr>
+     <td rowsapn='2'>telemetry</td>
+     <td>export</td>
+     <td>
+         <ul>
+             <li>summary - Retrieve telemetry data per month as json for the last n months, including the current month. Only works for client 0.</li>
+             <li>path - /{client_id}/telemetry/export/{start_from}</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+     <td>productList</td>
+     <td>
+         <ul>
+             <li>summary - Retrieve available products</li>
+             <li>path - /{client_id}/telemetry/products</li>
+             <li>method - get</li>
+         </ul>
+     </td>
+</tr>
+</tbody>
+</table>
