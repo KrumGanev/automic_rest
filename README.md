@@ -2,7 +2,7 @@
 
 Under construction! Not ready for use yet! Currently experimenting and planning!
 
-## Examples of How To Use (Buggy Alpha Version)
+## How To Use 
 
 
 ```python
