@@ -1,3 +1,32 @@
+# automic_rest
+
+Under construction! Not ready for use yet! Currently experimenting and planning!
+
+## Examples of How To Use (Buggy Alpha Version)
+
+
+```python
+import automic_rest as automic
+
+# init
+automic.connection(
+    userid='admin', 
+    password='*****', 
+    url='https://autmic-rest.com', 
+    noproxy=True, 
+    sslverify=False
+)
+
+# listExecutions 
+execs = automic.executions().listExecutions(client_id=1).json()
+automic.execution.executeObject()
+
+for o in execs['data']:
+    print(o['name'])
+
+```
+
+
 <table>
 <thead><th>Class</th><th>Function</th><th>Infos</th></thead>
 <tbody>
