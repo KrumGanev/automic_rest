@@ -19,7 +19,6 @@ automic.connection(
 
 # listExecutions 
 execs = automic.executions().listExecutions(client_id=1).json()
-automic.execution.executeObject()
 
 for o in execs['data']:
     print(o['name'])
