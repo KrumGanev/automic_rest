@@ -1,5 +1,5 @@
 <table>
-<thead><th>Class</th><th>Function</th<th>Infos</th></thead>
+     <thead><th>Class</th><th>Function</th><th>Infos</th></thead>
 <tbody>
 <tr>
      <td rowsapn="11">executions</td>
