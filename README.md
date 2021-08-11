@@ -1,6 +1,6 @@
-*    executions
- *   changeExecutionStatus
-     *   summary - Changes the status of an execution.
+*   executions
+    *   changeExecutionStatus
+        *   summary - Changes the status of an execution.
      *   path - /{client_id}/executions/{run_id}/status
      *   method - post
 
