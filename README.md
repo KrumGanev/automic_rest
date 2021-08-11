@@ -1,11 +1,11 @@
 # automic_rest
 Automic RestAPI via python
 
-executions
-   - changeExecutionStatus
-       summary - Changes the status of an execution.
-       path - /{client_id}/executions/{run_id}/status
-       method - post
+*  executions
+   *  changeExecutionStatus
+      *  summary - Changes the status of an execution.
+      *  path - /{client_id}/executions/{run_id}/status
+      *  method - post
 
    - computeErtEstimations
        summary - Get ERT estimations for the given workflow.
