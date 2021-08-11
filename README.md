@@ -23,6 +23,25 @@ execs = automic.executions().listExecutions(client_id=1).json()
 for o in execs['data']:
     print(o['name'])
 
+
+# executeObject
+data = {
+  "object_name": "SCRI.NEW.5",
+  "execution_option": "execute",
+  "inputs":
+  {
+    "PASS#": "test"
+  }
+ }
+runid = automic.executions().executeObject(client_id=1111, data=data).json()['run_id']
+
+print(runid)
+
+response = automic.executions().listReportContent(client_id=1111, run_id=runid, report_type='ACT').json()
+print(response['data'][0]['content'])
+
+
+
 ```
 
 
