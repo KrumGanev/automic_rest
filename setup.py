@@ -5,16 +5,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="automic_rest",
-    version="0.0.1",
+    version="0.0.4",
     author="ufopilot",
     author_email="xgadme2@gmail.com",
     description="Automic REST-API",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ufopilot/automic_rest",
-    #project_urls={
-    #    "Bug Tracker": "https://github.com/pypa/sampleproject/issues",
-    #},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
