@@ -1,6 +1,9 @@
-## automic_rest
-![version](https://img.shields.io/badge/version-0.0.3-blue) ![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen) ![state](https://img.shields.io/badge/state-dev-red)
-##
+## automic_rest (python client)
+![version](https://img.shields.io/badge/version-0.0.3-blue) ![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen) ![state](https://img.shields.io/badge/state-dev-red) ![automic](https://img.shields.io/badge/automic-12.3-green)
+#
+Automic-Rest-Client generated from AE/Swagger <br>
+<a >https://docs.automic.com/documentation/webhelp/english/AA/12.3/DOCU/12.3/REST%20API/Automation.Engine/swagger.json</a>
+#
 <ul>
      <li>
          <a href="#executions">executions</a>
