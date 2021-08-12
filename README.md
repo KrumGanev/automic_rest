@@ -1,3 +1,6 @@
+## automic_rest
+![version](https://img.shields.io/badge/version-0.0.3-blue) ![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen) 
+##
 <ul>
      <li>
          <a href="#executions">executions</a>
