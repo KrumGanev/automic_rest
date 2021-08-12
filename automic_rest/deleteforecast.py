@@ -12,7 +12,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 class deleteForecast:
-   def __init__(self, **kwargs):
+   def __init__(self, client_id:int=0, body=None):
        # Summary: Delete forecasts using ids.
        self.response = None 
        self.body = None 
@@ -21,7 +21,7 @@ class deleteForecast:
        self.content = None 
        self.text = None 
        self.status = None 
-       self.path = config().setArgs('/{client_id}/forecasts', **kwargs)
+       self.path = config().setArgs('/{client_id}/forecasts', locals())
 
        self.request() 
 
@@ -43,10 +43,10 @@ class deleteForecast:
             self.content = r.content 
             # converts bytes to string 
             self.text = r.text 
-            # http status_code 
-            self.status = r.status_code 
             # convert raw bytes to json_dict 
             self.response = r.json() 
+            # http status_code 
+            self.status = r.status_code 
             # If the response was successful, no Exception will be raised 
             r.raise_for_status() 
        except HTTPError as http_err: 

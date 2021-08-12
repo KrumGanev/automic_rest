@@ -12,7 +12,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 class moveHead:
-   def __init__(self, **kwargs):
+   def __init__(self, client_id:int=0, commit_id=None, body=None):
        # Summary: Imports version of provided GIT Hash to automation engine.
        self.response = None 
        self.body = None 
@@ -21,18 +21,18 @@ class moveHead:
        self.content = None 
        self.text = None 
        self.status = None 
-       self.path = config().setArgs('/{client_id}/repositories/commits/{commit_id}', **kwargs)
-       self.data = kwargs.get('data',"{}")
+       self.path = config().setArgs('/{client_id}/repositories/commits/{commit_id}', locals())
+       self.bodydata = body 
 
        self.request() 
 
    def request(self): 
-       headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+       requests_headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
        try: 
             r = requests.post(
                 config().url+self.path, 
-              headers=headers,
-              data=json.dumps(self.data),
+                headers=requests_headers,
+                data=json.dumps(self.bodydata),
                 auth=(config().userid, config().password), 
                 verify=config().sslverify, 
                 timeout=config().timeout 
@@ -47,10 +47,10 @@ class moveHead:
             self.content = r.content 
             # converts bytes to string 
             self.text = r.text 
-            # http status_code 
-            self.status = r.status_code 
             # convert raw bytes to json_dict 
             self.response = r.json() 
+            # http status_code 
+            self.status = r.status_code 
             # If the response was successful, no Exception will be raised 
             r.raise_for_status() 
        except HTTPError as http_err: 

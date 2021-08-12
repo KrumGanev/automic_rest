@@ -12,7 +12,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 class healthCheck:
-   def __init__(self, **kwargs):
+   def __init__(self, client_id:int=0):
        # Summary: Can be used to determine if the automation system is in a healthy state. A system is healthy if there is a PWP and at least one instance of CP and JWP respectively. When healthy, HTTP 200 is returned. When unhealthy, HTTP 503. Note: only use the HTTP status code to determine the health status since the response body is optional.
        self.response = None 
        self.body = None 
@@ -21,7 +21,7 @@ class healthCheck:
        self.content = None 
        self.text = None 
        self.status = None 
-       self.path = config().setArgs('/{client_id}/system/health', **kwargs)
+       self.path = config().setArgs('/{client_id}/system/health', locals())
 
        self.request() 
 
@@ -43,10 +43,10 @@ class healthCheck:
             self.content = r.content 
             # converts bytes to string 
             self.text = r.text 
-            # http status_code 
-            self.status = r.status_code 
             # convert raw bytes to json_dict 
             self.response = r.json() 
+            # http status_code 
+            self.status = r.status_code 
             # If the response was successful, no Exception will be raised 
             r.raise_for_status() 
        except HTTPError as http_err: 

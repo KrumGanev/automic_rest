@@ -12,7 +12,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 class getObjects:
-   def __init__(self, **kwargs):
+   def __init__(self, client_id:int=0, object_name=None, query=None):
        # Summary: Can be used to export single objects by name
        self.response = None 
        self.body = None 
@@ -21,14 +21,18 @@ class getObjects:
        self.content = None 
        self.text = None 
        self.status = None 
-       self.path = config().setArgs('/{client_id}/objects/{object_name}', **kwargs)
+       self.path = config().setArgs('/{client_id}/objects/{object_name}', locals())
+       if query != None:
+            self.query = '?'+query
+       else:
+            self.query = ''
 
        self.request() 
 
    def request(self): 
        try: 
             r = requests.get(
-                config().url+self.path, 
+                config().url+self.path+self.query, 
                 auth=(config().userid, config().password), 
                 verify=config().sslverify, 
                 timeout=config().timeout 
@@ -43,10 +47,10 @@ class getObjects:
             self.content = r.content 
             # converts bytes to string 
             self.text = r.text 
-            # http status_code 
-            self.status = r.status_code 
             # convert raw bytes to json_dict 
             self.response = r.json() 
+            # http status_code 
+            self.status = r.status_code 
             # If the response was successful, no Exception will be raised 
             r.raise_for_status() 
        except HTTPError as http_err: 
