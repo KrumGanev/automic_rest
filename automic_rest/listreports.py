@@ -26,10 +26,15 @@ class listReports:
        self.request() 
 
    def request(self): 
+       requests_headers = {
+                              'Content-type': 'application/json', 
+                              'Accept': 'application/json', 
+                              'Authorization' : "Basic %s" % config().base64auth 
+       }
        try: 
             r = requests.get(
                 config().url+self.path, 
-                auth=(config().userid, config().password), 
+                headers=requests_headers,
                 verify=config().sslverify, 
                 timeout=config().timeout 
             ) 

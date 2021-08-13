@@ -27,13 +27,16 @@ class moveHead:
        self.request() 
 
    def request(self): 
-       requests_headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+       requests_headers = {
+                              'Content-type': 'application/json', 
+                              'Accept': 'application/json', 
+                              'Authorization' : "Basic %s" % config().base64auth 
+       }
        try: 
             r = requests.post(
                 config().url+self.path, 
                 headers=requests_headers,
                 data=json.dumps(self.bodydata),
-                auth=(config().userid, config().password), 
                 verify=config().sslverify, 
                 timeout=config().timeout 
             ) 
