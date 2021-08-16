@@ -11,7 +11,7 @@ _timeout    = None
 
 
 class connection(object): 
-    def __init__(self, auth="", url="", noproxy=True, sslverify=False, timeout=3600): 
+    def __init__(self, auth="", url="", noproxy=True, sslverify=False, timeout=3600, cert=None): 
         self.auth       = auth
         if self.auth == "":
             self.auth = _auth
@@ -28,7 +28,8 @@ class connection(object):
         self.noproxy    = noproxy
         self.sslverify  = sslverify
         self.timeout    = timeout
-        
+        self.cert       = cert
+
         self.domain = urlparse(self.baseurl).netloc 
         self.basepath = '/api/v1'
         self.url = self.baseurl+'/ae'+self.basepath 
@@ -39,14 +40,19 @@ class connection(object):
  
     def init(self): 
         #global _userid, _password
-        global _auth, _url, _sslverify, _timeout, _baseurl 
+        global _auth, _url, _sslverify, _timeout, _baseurl
         #_userid = self.userid 
         #_password = self.password 
         _auth = self.auth
         _url = self.url 
         _sslverify = self.sslverify
         _timeout = self.timeout
-        _baseurl = self.baseurl
+        _baseurl = self.baseurl 
+        #_cert = self.cert
+        if self.sslverify == True:
+            _sslverify = self.cert
+        else:
+            _sslverify = self.sslverify
  
 class config(object): 
     def __init__(self): 
